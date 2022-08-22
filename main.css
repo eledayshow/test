@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+@import url('fonts/ofont.ru_Roboto\ Flex.ttf');
+
+h1 {
+    font-family: 'Play', sans-serif;
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(243, 243, 243);
+    overflow-x: hidden;
+}
+
+.greet {
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.greet .jarvis {
+    height: 40vh;
+    width: 40vh;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    padding-top: 0px;
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(0.8, 0, 0.18, 0.98);
+
+    animation-name: startmove;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.greet .jarvis .jarvisimg {
+    height: 40vh;
+    width: 40vh;
+}
+
+.greet .jarvis .back {
+    background: rgb(255, 240, 23);
+    z-index: -1;
+    border-radius: 50%;
+
+    animation-name: color;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+
+    margin: 0.15vh;
+    height: 39.8vh;
+    width: 39.7vh;
+}
+
+.greet .jarvis .jarvisimg, .back {
+    position: absolute;
+}
+
+.greet .jarvis:hover {
+    position: absolute;
+    padding-top: 10px;
+}
+
+@keyframes color {
+    0% {
+        background: rgb(255, 240, 23);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    25% {
+        background: rgb(23, 255, 50);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    50% {
+        background: rgb(23, 255, 224);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    75% {
+        background: rgb(255, 23, 236);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        background: rgb(255, 240, 23);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes move {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+        left: 0vw;
+    }
+    100% {
+        opacity: 1;
+        left: -55vw;
+    }
+}
+
+@keyframes bg {
+    0% {
+        background-color: black;
+    }
+    90% {
+        background-color: black;
+    }
+    100% {
+        background-color: rgb(243, 243, 243);
+    }
+}
+
+@keyframes startmove {
+    0% {
+        left: -130vw;
+    }
+    100% {
+        left: -55vw;
+    }
+}
+
+.l {
+    width: 50vw;
+    height: 100vh;
+    float: left;
+}
+
+.greet .r {
+    width: 50vw;
+    height: 100vh;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.greet .r h1 {
+    opacity: 0;
+    animation-name: greetrstart;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+}
+
+.greet .r p {
+    opacity: 0;
+    animation-name: greetrstart;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.9s;
+}
+
+.greet .r .info {
+    margin-left: -15vw;
+    width: 45vw;
+    padding: 15px;
+    padding-bottom: 20px;
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(0, 0.91, 1, 1);
+    border-left: 2px solid #303030;
+}
+
+.greet .r .info:hover {
+    background-color: #303030;
+    color: white;
+}
+
+@keyframes greetrstart {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.path {
+    width: 18vh;
+    position: absolute;
+    top: 4vh;
+    right: 4vh;
+}
+
+.about {
+    background-color: white;
+    height: 100vh;
+    padding: 1vw;
+    padding-top: 2vw;
+    position: relative;
+}
+
+.about .info {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about .info p {
+    width: 70vw;
+    font-size: 1.2em;
+    padding: 1vw;
+    position: relative;
+    z-index: 1;
+}
+
+.about .info img {
+    position: absolute;
+    height: 50vh;
+    min-height: 250px;
+}
+
+.about h1 {
+    text-align: center;
+    font-size: 1em;
+    color: #303030;
+}
+
+.about .back1, .back2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.help {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(-45deg, #ffb123, #efff01);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.help .info {
+    width: 49vw;
+    height: 100vh;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.help h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5em;
+    text-align: right;
+    display: block;
+}
+
+.help img {
+    display: block;
+}
+
+.regcard {
+    padding: 0;
+    width: 120vh;
+    max-width: 90vw;
+    height: 70vh;
+    border-radius: 3vh;
+    background-color: white;
+}
+
+.regcard .l {
+    width: 50%;
+    height: 100%;
+    padding: 5vh;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.regcard .l img {
+    width: 60%;
+}
+
+.regcard .r {
+    height: 100%;
+    width: 50%;
+    padding: 5vh;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.regcard .r h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vh;
+    color: rgb(26, 26, 26);
+    text-align: center;
+}
+
+.regcard .r p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.35vh;
+    color: rgb(67, 67, 67);
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.regcard .r .email, .password {
+    position: relative;
+    margin-bottom: 1vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.regcard .r .password {
+    margin-bottom: 3vh;
+}
+
+.regcard .r .login, .pass {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.2vh;
+    padding: 1vh;
+    width: 85%;
+    border: none;
+    padding: 2vh 1vh;
+    border-radius: 1vh;
+    background-color: #f0f0f0;
+    padding-left: 5.5vh;
+    color: #2c2c2c;
+}
+
+.regcard .r img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-1.5vh);
+    left: 5.2vh;
+    height: 3vh;
+}
+
+.regcard .r .buttons {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.regcard .r .regbutton {
+    border: none;
+    padding: 2vh;
+    border-radius: 5vh;
+    background: linear-gradient(90deg, #5500ff, #b400ff);
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.5vh;
+    width: 108%;
+    transform: translateX(-4%);
+    height: 8vh;
+    margin-bottom: 1vh;
+    box-shadow: 0 0 10px #6900ff5c;
+    transition: 0.5s;
+}
+
+.regcard .r .regbutton:hover {
+    background: linear-gradient(90deg, #7ceeba, #e3bb8f);
+    color: black;
+    box-shadow: none;
+}
+
+.regcard .r .logbutton {
+    border: none;
+    padding: 2vh;
+    border-radius: 5vh;
+    background: linear-gradient(90deg, #f2f2f2, #f2f2f2);
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.regcard .r .logbutton:hover {
+    background: linear-gradient(90deg, #7ceeba, #e3bb8f);
+    color: white;
+}
+
+.help .ibottom {
+    position: absolute;
+    bottom: 1vh;
+    width: 100vw;
+    color: #434343;
+}
+
+.help .ibottom p {
+    width: 100%;
+    text-align: center;
+}
+
+.help .ibottom .arr {
+    width: 3vh;
+    margin: auto;
+}
+
+.idea {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ideator {
+    background: linear-gradient(45deg, #4d77ff, #f985ff);
+    width: 75vh;
+    height: 75vh;
+    border-radius: 5vh;
+    padding: 10vh;
+    color: white;
+}
+
+.ideator .nick {
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 4vh;
+    width: 100%;
+    padding: 2vh;
+    border: none;
+    border-radius: 5vh;
+    color: rgb(39, 39, 39);
+}
+
+.ideatextarea {
+    border: none;
+    border-radius: 1vh;
+    padding: 2vh;
+    margin-top: 2vh;
+    font-family: 'Ubuntu', sans-serif;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 55%;
+    min-height: 15%;
+    color: rgb(39, 39, 39);
+}
+
+.ideator .sendbutton {
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    background-color: rgb(57, 255, 67);
+    padding: 2vh;
+    color: rgb(39, 39, 39);
+    margin-top: 1.5vh;
+    border-radius: 5vh;
+    width: 100%;
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(0.81, -0.01, 0.2, 0.96);
+    font-size: medium;
+}
+
+.ideator .sendbutton:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.bottom {
+    background-color: #5c5c5c;
+    color: rgb(201, 201, 201);
+    text-align: center;
+    padding: 3vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bottom a {
+    color: rgb(201, 201, 201);
+    text-decoration: none;
+    transition: 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bottom p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.bottom .tg:hover {
+    color: #03a9f4;
+}
+
+.bottom .zen:hover {
+    color: #303030;
+}
+
+.bottom .youtube:hover {
+    color: #ff0505;
+}
+
+input, textarea {
+    outline: none;
+}
+
+.regcard::after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.652);
+    padding: 0;
+    width: 120vh;
+    max-width: 90vw;
+    height: 70vh;
+    border-radius: 3vh;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.regcard .why {
+    opacity: 0;
+    position: absolute;
+    top: 49vh;
+    left: 51vw;
+    font-family: 'Ubuntu';
+    color: white;
+    z-index: 200;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.regcard .why:hover {
+    color: #03a9f4;
+}
+
+.regcard .lock img {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    z-index: 200;
+    height: 30vh;
+    filter: invert(1);
+    transform: translateY(-3vh);
+    transition: 0.5s;
+}
+
+.regcard .lock:hover img {
+    transform: translateX(-6vh) translateY(-3vh);
+}
+
+.regcard .lock:hover .why {
+    opacity: 1;
+    left: 53vw;
+}
+
+.regcard .opentasks {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    z-index: 200;
+    transform: translateY(15vh);
+    width: max-content;
+    height: max-content;
+    background-color: white;
+    padding: 2vh;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+    border-radius: 3vh;
+    transition: 0.5s;
+}
+
+.regcard .opentasks:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+@media screen and (max-width: 700px) {
+    .greet .r {
+        display: block;
+        width: 100%;
+        height: 50vh;
+    }
+    .greet .l {
+        display: block;
+        height: 50vh;
+        width: 100%;
+        float: top;
+    }
+    .greet .l .jarvis {
+        position: relative;
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+
+        margin-top: 10vh;
+        animation: none;
+    }
+    .greet .l .jarvis:hover {
+        padding: 0;
+    }
+    .greet .r .info {
+        position: relative;
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        margin-top: 60vh;
+        max-width: 80vw;
+        width: 80vw;
+        height: max-content;
+    }
+    .greet .r .info:hover {
+        background-color: #f2f2f2;
+        color: black;
+    }
+
+    .ideator {
+        max-width: 90vw;
+        padding: 10vh 5vh;
+        border-radius: 4vh;
+    }
+    .regcard {
+        max-width: 90vw;
+    }
+    .regcard .l {
+        width: 0;
+        padding: 0;
+    }
+    .regcard .r {
+        width: 100%;
+    }
+    .regcard::after {
+        transform: none;
+    }
+}
