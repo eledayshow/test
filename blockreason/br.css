@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    padding: 2vh;
+    min-height: 100vh;
+    max-height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    max-width: 80vw;
+    padding: 5vh;
+    background: none;
+    border-radius: 2vh;
+    background: linear-gradient(-45deg, #ffcd13, #eef930);
+
+    animation-name: text;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    transition: 0.5s;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 2.7vh;
+    opacity: 0;
+
+    animation-name: text;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.4s;
+}
+
+h1 {
+    font-size: 7vh;
+    margin-bottom: 2vh;
+    color: #fafafa;
+    opacity: 0;
+
+    animation-name: text;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 136, 134);
+    transition: 0.2s;
+    opacity: 0;
+
+    animation-name: text;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.4s;
+}
+
+a:hover {
+    color: white;
+}
+
+.ava {
+    height: 15vh;
+    position: absolute;
+    left: 85vw;
+
+    animation-name: ava;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 5vh;
+    }
+    p, a {
+        font-size: 2.5vh;
+    }
+    .ava {
+        height: 10vh;
+        left: 70vw;
+    }
+}
+
+.path {
+    width: 18vh;
+    position: absolute;
+    top: 4vh;
+    right: 4vh;
+}
+
+.back {
+    width: 4vh;
+    position: absolute;
+    top: 3vh;
+    left: 4vh;
+}
+
+@keyframes ava {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(-3vh);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(3vh);
+    }
+    75% {
+        opacity: 1;
+        transform: translateY(-2vh);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
